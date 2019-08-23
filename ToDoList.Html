@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="ToDoListStyle.css" type="text/css">
   </head>
-  <body >
+  <body>
       <header>
           <h2>TO DO LIST</h2>
       </header>
@@ -20,11 +20,14 @@
               </ul>
           </nav>
           <article>
-              <input type="text" name="fname" id="fname">
-              <button onclick="addFunction()">Add Item</button>
-              <ul id="myUL">
-
-              </ul>
+            <div class="search-container" >
+            <input type="text" list="datalist" onkeyup="search(this.value)" id ="todolistItem" placeholder="Search for ......">
+             <input onclick="AddFunction()" type="button" value="Add">
+              <datalist id="datalist" >
+              </datalist>
+        </div>
+        <table id="table" >
+        </table>
           </article>
           <script type="text/javascript" src="ToDoList.js"> </script>
 
